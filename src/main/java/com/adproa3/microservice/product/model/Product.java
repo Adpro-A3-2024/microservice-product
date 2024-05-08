@@ -40,6 +40,7 @@ public class Product {
     private int productDiscountDaysLeft = 0;
     private String productPictureUrl;
 
+//    Constructor tanpa ID (ID digenerate oleh jpa secara otomatis)
     public Product(String productName, double productPrice, int productStock, double productDiscount, int productDiscountDaysLeft, String productPictureUrl) {
         this.productName = productName;
         this.productPrice = productPrice;
