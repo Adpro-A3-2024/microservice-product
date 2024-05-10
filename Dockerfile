@@ -13,4 +13,4 @@ WORKDIR /app
 RUN ls -al
 COPY ./microservice_product-0.0.1-SNAPSHOT.jar /app
 EXPOSE 8080
-CMD ["java","-jar","microservice_product-0.0.1-SNAPSHOT.jar","--spring.profiles.active=${PRODUCTION}","--spring.datasource.url=${JDBC_DATABASE_URL}", "--spring.datasource.username=${JDBC_DATABASE_USERNAME}", "--spring.datasource.password=${JDBC_DATABASE_PASSWORD}","--spring.datasource.driver-class-name=org.postgresql.Driver","--spring.jpa.hibernate.ddl-auto=update","--spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect","--spring.jpa.properties.hibernate.format_sql=true"]
+CMD ["java","-jar","microservice_product-0.0.1-SNAPSHOT.jar","--spring.profiles.active=prod","--spring.datasource.url=jdbc:postgresql://aws-0-ap-southeast-1.pooler.supabase.com:5432/postgres", "--spring.datasource.username=postgres.zvmcikumnphevucgqqbx", "--spring.datasource.password=a3-adpro-murifq","--spring.datasource.driver-class-name=org.postgresql.Driver","--spring.jpa.hibernate.ddl-auto=update","--spring.jpa.properties.hibernate.dialect=org.hibernate.dialect.PostgreSQLDialect","--spring.jpa.properties.hibernate.format_sql=true"]
