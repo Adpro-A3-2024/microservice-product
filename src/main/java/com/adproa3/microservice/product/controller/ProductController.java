@@ -3,8 +3,6 @@ package com.adproa3.microservice.product.controller;
 import com.adproa3.microservice.product.model.DTO.SetProductDiscountDTO;
 import com.adproa3.microservice.product.model.Product;
 import com.adproa3.microservice.product.service.ProductService;
-import com.fasterxml.jackson.databind.node.ObjectNode;
-import lombok.Data;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.annotation.Validated;
@@ -12,7 +10,6 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.server.ResponseStatusException;
 
 import java.util.List;
-import java.util.Set;
 import java.util.UUID;
 
 @RestController
