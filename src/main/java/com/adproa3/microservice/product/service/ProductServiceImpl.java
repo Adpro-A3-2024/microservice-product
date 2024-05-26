@@ -4,6 +4,7 @@ import com.adproa3.microservice.product.model.DTO.SetProductDiscountDTO;
 import com.adproa3.microservice.product.model.Product;
 import com.adproa3.microservice.product.repository.ProductRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -47,5 +48,10 @@ public class ProductServiceImpl implements ProductService {
         productToBeEdited.setProductDiscountDaysLeft(setProductDiscountDTO.getDiscountDays());
         productRepository.save(productToBeEdited);
         return productToBeEdited;
+    }
+
+    @Scheduled(cron = "5 * * * * *")
+    public void discountDaysDecrementCronJob() {
+        System.out.println("aaa");
     }
 }
